@@ -133,9 +133,6 @@ services:
     volumes:
       - certs:/usr/share/elasticsearch/config/certs
       - esdata02:/usr/share/elasticsearch/data
-    ports:
-      - ${ES_PORT}:9200
-    restart: always
     environment:
       - node.name=ecp-elasticsearch2
       - cluster.name=${CLUSTER_NAME}
@@ -181,9 +178,6 @@ services:
     volumes:
       - certs:/usr/share/elasticsearch/config/certs
       - esdata03:/usr/share/elasticsearch/data
-    ports:
-      - ${ES_PORT}:9200
-    restart: always
     environment:
       - node.name=ecp-elasticsearch3
       - cluster.name=${CLUSTER_NAME}
